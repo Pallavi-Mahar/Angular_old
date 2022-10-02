@@ -1,0 +1,17 @@
+<form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+    <input name="first" ngModel required #first="ngModel">
+    <input name="last" ngModel>
+    <select (change)="update($event)">
+        <option value="default">---</option>
+        <option *ngFor="let player of players" [value]="player"> 
+            {{ player }} 
+        </option>
+    </select>    
+    <button  (click)="post()">Submit</button>
+</form>
+
+<p>First name value: {{first.value}}</p>
+<p>First name valid: {{first.valid}}</p>
+<p>First value: {{f.value | json}}</p>
+<p>First valid: {{f.valid}}</p>
+<p>Select value: {{selected}}</p>

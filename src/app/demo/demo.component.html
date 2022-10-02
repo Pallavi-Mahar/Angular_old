@@ -1,0 +1,20 @@
+<p>demo works!</p>
+<div *ngIf="show" class="name"> New Demo </div>
+
+<!--<ul *ngFor="let player of players">
+    <li>{{ player.name }}</li>
+</ul>-->
+<table>
+    <tr *ngFor="let player of players">
+        <td>{{ player.name }}</td>
+        <td>{{ player.age }}</td>
+    </tr>
+</table>
+<!--<table>
+    <tr *ngFor="let player of players; let i=index">
+        <td>{{ i }}</td>
+    </tr>
+   
+</table>-->
+<button (click)="add()">Add</button>
+<button (click)="delete()">Delete</button>

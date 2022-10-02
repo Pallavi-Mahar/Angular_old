@@ -1,0 +1,17 @@
+<p>newdemo works!</p>
+<table>
+    <tr>
+        <td>{{ newdata.description }}</td>
+        <td>{{ newdata.courseListIcon }}</td>
+    </tr>
+</table>
+<p>
+    <label for="example-ngModel"></label>
+    <input [(ngModel)]="currentItem.name" id="example-ngModel"/>
+    <select></select>
+    <br>
+    <span>Value for currentItem.name:{{ currentItem.name}}</span>
+</p>
+<p>
+    <input (input)="getChanged($event)"/><br>
+</p>
